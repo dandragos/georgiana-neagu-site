@@ -10,9 +10,18 @@
     <title>Georgiana Neagu & Band</title>
 </head>
 <body>
-    <video autoplay muted loop>
+    <video preload="metadata" autoplay muted loop playsinline id="vid">
         <source src="video.mp4" type="video/mp4">
     </video>
+
+    <script>
+       var vid = document.getElementById('vid');
+
+function playVideo() {
+    vid.play();
+}
+    </script>
+
     <div class="content">
         <img src="LOGOTRANSP.png" id="logo">
         <a href="home.html" class="enter-button" id="enter-button">Enter site</a>
