@@ -361,16 +361,19 @@ label.form-label {
       "form"; 
     align-items: center;
     position: relative;
-    bottom: 15%;
+    bottom: -10%;
   }
   .form{
-    bottom: 25%;
+    bottom: 48%;
     width: 100%;
     position: relative;
   }
   .logodot{
     width: 100%;
     align-items: center;
+    z-index: -10;
+    position: relative;
+    bottom: 30%;
   }
 
   .container img{
@@ -380,7 +383,7 @@ label.form-label {
   .container p{
     width: 100%;
     position:relative;
-    bottom: 60%;
+    bottom: 120%;
   }
   .container h2{
     text-align: center;
