@@ -230,7 +230,7 @@ header h1 {
 }
 
 
-.POZA-3 h {
+.POZA-3 p {
 
   font-size: 1.5em;
   font-family: 'Questrial', sans-serif;
@@ -239,7 +239,7 @@ header h1 {
   position: relative;
   margin: 40px;
   letter-spacing: 2px;
-  top: 80%;
+  top: 75%;
 }
 
 .footer {
@@ -672,9 +672,9 @@ div.container_meniu p
     right:10%;
   }
 
-  .POZA-3 h{
-    top:95%;
-    right:20%;
+  .POZA-3 p{
+    top:80%;
+    right:15%;
   }
 
 
