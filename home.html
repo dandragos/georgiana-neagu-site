@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="style_slideshow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:800">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <style>
+      @media (max-width: 567px) {
+  h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+}
+
+
+/* Loader Styles start here */
+.loader-wrapper {
+  --line-width: 5px;
+  --curtain-color: whitesmoke;
+  --outer-line-color: white;
+  --middle-line-color: gray;
+  --inner-line-color: black;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:1000;
+}
+
+.loader {
+  display:block;
+  position: relative;
+  top:50%;
+  left:50%;
+/*   transform: translate(-50%, -50%); */
+  width:150px;
+  height:150px;
+  margin:-75px 0 0 -75px;
+  border:var(--line-width) solid transparent;
+  border-top-color: var(--outer-line-color);
+  border-radius:100%;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  z-index:1001;
+}
+
+.loader:before {
+  content:"";
+  position: absolute;
+  top:4px;
+  left:4px;
+  right:4px;
+  bottom:4px;
+  border:var(--line-width) solid transparent;
+  border-top-color: var(--inner-line-color);
+  border-radius:100%;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content:"";
+  position: absolute;
+  top:14px;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  border:var(--line-width) solid transparent;
+  border-top-color: var(--middle-line-color);
+  border-radius:100%;
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0%   { 
+    -webkit-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+          transform: rotate(0deg);
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); 
+      -ms-transform: rotate(360deg); 
+          transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0%   { 
+    -webkit-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+          transform: rotate(0deg);
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); 
+      -ms-transform: rotate(360deg); 
+          transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper .loader-section {
+  position:fixed;
+  top:0;
+  background:var(--curtain-color);
+  width:51%;
+  height:100%;
+  z-index:1000;
+}
+
+.loader-wrapper .loader-section.section-left {
+  left:0
+}
+.loader-wrapper .loader-section.section-right {
+  right:0;
+}
+
+/* Loaded Styles */ 
+.loaded .loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+}
+.loaded .loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+}
+.loaded .loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.loaded .loader-wrapper {
+  visibility: hidden;
+  transform:translateY(-100%);
+  transition: all .3s 1s ease-out;
+}
+    </style>
+
+    <script>
+
+      
+// For Live Projects
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelector('body').classList.add('loaded');
+  }, 1000); // adăugați o întârziere de 1000 de milisecunde (1 secundă)
+});
+
+
+
+    </script>
+
+    <title>Georgiana Neagu & Band</title>
+</head>
+<body>
+
+  <header id="header">
+    <img src="logotranspnegru.png" class="logoheader">
+</header>
+
+<a href="contact.html" id="floating-button">
+  <i class="fas fa-envelope"></i><span>Contactează-ne</span>
+</a>
+
+
+
+<div class="loader-wrapper">
+  <div class="loader">
+  </div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+
+<!-- Butonul "back-button" pentru a reveni la afișarea butoanelor -->
+<a href="home.html">
+    <div class="back-button" id="back-button">
+        <div class="slide-button-container transparent pullUpDown">
+            <p>MENIU</p>
+        </div>
+    </div>
+</a>
+
+
+    <!-- ... Alte coduri HTML ... -->
+
+<div class="container">
+  <div class="POZA-3">
+    <h>TRUPA</h>
+    <a href="test.html"></a>
+  </div>
+
+  <div class="POZA6" >
+<a class = "aclass" href="contact.html"><i class="fas fa-envelope"> </i> CONTACTEAZA-NE</a>
+
+</div>
+
+<div class="POZA7">
+  <a class = "aclass" href="news.html"><i class="far fa-newspaper"> </i> NOUTATI</a>
+</div>
+        
+  <div class="POZA1">
+    <p>PLAYLIST</p>
+    <a href="playlist.html"></a>
+  </div>
+        
+  <div class="POZA2">
+    <p>VIDEO</p>
+    <a href="video.html"></a>
+  </div>
+        
+  <div class="POZA-4">
+    <p>INTREBARI FRECVENTE</p>
+    <a href="intrebari.html"></a>
+  </div>
+        
+  <div class="POZA5">
+    <p>REVIEW</p>
+    <a href="review.html"></a>
+  </div>
+        
+
+ <!-- Butonul "text-button" inițial ascuns -->
+ <div class="text-button" id="text-button" style="display: none;">
+</div>
+
+<!-- Butonul "back-button" pentru a reveni la afișarea butoanelor -->
+<div class="back-button" id="back-button" style="display: none;">
+
+  
+  
+    <div class="container transparent pullUpDown">
+        <p>MENIU</p>
+      </div>
+</div>
+
+</div>
+
+<div class="sections">
+
+  
+
+  
+  
+  <!--
+  <div class="section" id="playlist-section">
+
+    
+<h1> PLAYLIST</h1>
+<p>Playlist variat pentru petreceri private, evenimente corporate si nunti - live 100%!</p>
+
+
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(1)">PIESE SLOW</button>
+        <div class="content_slide" id="content1">
+            <p>All of Me - John Legend</p>
+            <p>At Last - Etta James</p>
+            <p>Careless Whisper - George Michael</p>
+            <p>Hello - Lionel Richie</p>
+            <p>Killing Me Softly - Fugees</p>
+            <p>If I Ain't Got You - Alicia Keys</p>
+            <p>Je t’aime - Lara Fabian</p>
+            <p>Nights in White Satin - Tina Arena</p>
+            <p>Numele tău - Elena Gheorghe</p>
+            <p>Perfect - Ed Sheeran</p>
+            <p>Pentru Totdeauna - Trupa Zero</p>
+            <p>Simply Falling - Iyeoka</p>
+            <p>Someone Like You - Adele</p>
+            <p>Un Soir de Pluie - Blues Trottoir</p>
+            <p>Shallow - Lady Gaga & Bradley Cooper</p>
+            
+
+        </div>
+
+        <button class="slide-button" onclick="toggleContent(2)">PIESE ELECTRO-POP</button>
+        <div class="content_slide" id="content2">
+            <p>All About That Bass - Meghan Trainor</p>
+<p>Adventure of a Lifetime - Coldplay</p>
+<p>Can’t Stop the Feeling! - Justin Timberlake</p>
+<p>Cheap Thrills - Sia</p>
+<p>Counting Stars - OneRepublic</p>
+<p>Finesse - Bruno Mars</p>
+<p>Get Lucky - Daft Punk ft. Pharrell Williams, Nile Rogers</p>
+<p>Happy - Pharrell Williams</p>
+<p>How Deep is Your Love - Calvin Harris & Disciples</p>
+<p>Hotline Bling - Drake</p>
+<p>Love On the Brain - Rihanna</p>
+<p>Marry You - Bruno Mars</p>
+<p>Man Down - Rihanna</p>
+<p>One Kiss - Calvin Harris & Dua Lipa</p>
+<p>Rude - MAGIC!</p>
+<p>Runaway Baby - Bruno Mars</p>
+<p>Sarà perché ti amo - Ricchi e Poveri</p>
+<p>Sex on Fire - Kings of Leon</p>
+<p>Shape of You - Ed Sheeran</p>
+<p>She’s On My Mind - JP Cooper</p>
+<p>Single Ladies - Beyoncé</p>
+<p>Uptown Funk - Mark Ronson ft. Bruno Mars</p>
+<p>This Love - Maroon 5</p>
+<p>Work - Rihanna ft. Drake</p>
+<p>Blurred Lines - Robin Thicke ft. T.I. & Pharrell</p>
+
+        </div>
+
+        <button class="slide-button" onclick="toggleContent(3)">PIESE ROMANESTI </button>
+        <div class="content_slide" id="content3">
+
+            <p>Așa că beau - Bosquito</p>
+<p>Cât de departe - Holograf</p>
+<p>Cine m-a făcut om mare - Delia</p>
+<p>Colț de suflet - Andra ft. Adi Cristescu</p>
+<p>Dacă pleci - Cătălin Crișan</p>
+<p>Dă-mi nopțile înapoi - A.S.I.A.</p>
+<p>De-ai fi tu salcie - Mihaela Mihai</p>
+<p>De-ar fi să vii - Mihaela Runceanu</p>
+<p>Dragostea din tei - O-Zone</p>
+<p>Dragostea rămâne - Andra</p>
+<p>Drumurile noastre - Dan Spătaru</p>
+<p>Două mâini - Bosquito</p>
+<p>Fericirea are chipul tău - Mihaela Runceanu</p>
+<p>Hopa Hopa - Bosquito</p>
+<p>Inimă nu fi de piatră - Provincialii</p>
+<p>Lasă-mă papa la mare - Andre</p>
+<p>Lasă-mă Să Te… - Connect-R & Raluka</p>
+<p>Macho Man - Genius</p>
+<p>Mai frumoasă - Laura Stoica</p>
+<p>Nunta - Phoenix</p>
+<p>Ochii tăi - Holograf</p>
+<p>Pas Cu Pas - Andra</p>
+<p>Sărutul nopților de rai - Provincialii</p>
+<p>Să nu-mi iei niciodată dragostea - Holograf</p>
+<p>Sună periculos - A.S.I.A.</p>
+<p>Super femei - Body & Soul</p>
+<p>Strada Speranței - Corina Chiriac</p>
+<p>Ți-am dat un inel - Holograf</p>
+<p>Trandafire - Damian Draghici ft. Feli</p>
+<p>Trurli - Mihaela Mihai</p>
+<p>Unde dragoste nu e, nimic nu e - Gheorghe Gheorghiu</p>
+<p>… Nici o stea - Laura Stoica</p>
+<p>Vino la mine - N&D</p>
+<p>Vreau sărutarea ta - Andra ft. Tiger 1</p>
+<p>Vrei să ne întâlnim sâmbătă seară? - Gică Petrescu</p>
+<p>1234 (Unde dragoste nu e) - Delia</p>
+
+
+        </div>
+
+        <button class="slide-button" onclick="toggleContent(4)">PIESE LATINO</button>
+        <div class="content_slide" id="content4">
+            <p>1, 2, 3 - Sofia Reyes ft. Jason Derulo & De La Ghetto</p>
+            <p>Balada Boa - Gusttavo Lima</p>
+            <p>Bailando - Enrique Iglesias ft. Descemer Bueno, Gente De Zona</p>
+            <p>Bará Berê - Michel Teló</p>
+            <p>Can’t Remember to Forget You - Shakira ft. Rihanna</p>
+            <p>Corazón - Maluma ft. Nego do Borel</p>
+            <p>Despacito - Luis Fonsi ft. Daddy Yankee</p>
+            <p>Havana - Camila Cabello ft. Young Thug</p>
+            <p>La Bicicleta - Carlos Vives & Shakira</p>
+            <p>Me Enamoré - Shakira</p>
+            <p>Mi Gente - J Balvin & Willy William</p>
+            <p>Pauvre Diable - Vaya Con Dios</p>
+            <p>Reggaetón Lento - CNCO & Little Mix</p>
+            <p>Señorita - Shawn Mendes & Camila Cabello</p>
+            <p>Bamboléo - Gipsy Kings</p>
+            <p>Volare - Gipsy Kings</p>
+            <p>Vamos a Bailar - Gipsy Kings</p>
+            <p>Djobi, Djoba - Gipsy Kings</p>
+            </div>
+
+        <button class="slide-button" onclick="toggleContent(5)">OLDIES BUT GOLDIES</button>
+        <div class="content_slide" id="content5">
+            <p>La Bamba - Los Lobos & Gipsy Kings</p>
+            <p>Man! I Feel Like A Woman - Shania Twain</p>
+            <p>Mercy - Duffy</p>
+            <p>Money, Money, Money - ABBA</p>
+            <p>Nah Neh Nah - Vaya Con Dios</p>
+            <p>One Way Ticket - Eruption</p>
+            <p>You'll Be Mine (Party Time) - Gloria Estefan</p>
+            <p>Pepita - Bosquito</p>
+            <p>Proud Mary - Tina Turner</p>
+            <p>Que Sera, Sera (Whatever Will Be, Will Be) - Doris Day</p>
+            <p>Jump in the Line (Shake, Señora) - Harry Belafonte</p>
+            <p>The Best - Tina Turner</p>
+            <p>Something’s Got a Hold On Me - Christina Aguilera</p>
+            <p>Stand By Me - Ben E. King</p>
+            <p>Upside Down - Paloma Faith</p>
+            <p>Valerie - Mark Ronson ft. Amy Winehouse</p>
+            <p>Venus - Shocking Blue</p>
+            <p>Well, Well, Well - Duffy</p>
+            <p>You Know I’m No Good - Amy Winehouse</p>
+            <p>You’re The One That I Want - Grease</p>
+            <p>That Man - Caro Emerald</p>
+            <p>Tutti Frutti - Little Richard</p>
+            <p>A Night Like This - Caro Emerald</p>
+            <p>As Good As New - ABBA</p>
+            <p>Blue Suede Shoes - Elvis Presley</p>
+            <p>Celebration - Kool & The Gang</p>
+            <p>Cotton Eye Joe - Rednex</p>
+            <p>Conga - Gloria Estefan</p>
+            <p>Dançando Lambada - Kaoma</p>
+            <p>Hands Up - Ottawan</p>
+            <p>Have You Ever Seen the Rain - Rod Stewart</p>
+            <p>Hit the Road Jack - Ray Charles</p>
+            <p>Hot Stuff - Donna Summer</p>
+            <p>I Will Survive - Gloria Gaynor</p>
+            <p>Jailhouse Rock - Elvis Presley</p>
+            <p>Gimme! Gimme! Gimme! (A Man After Midnight) - ABBA</p>
+            <p>Gimme Hope Jo’anna - Eddy Grant</p>
+            <p>Lambada - Kaoma</p>
+            
+            
+            </div>
+
+        <button class="slide-button" onclick="toggleContent(6)">MUZICA POPULARA - TRADITIONALA SI REINTERPRETATA</button>
+        <div class="content_slide" id="content6">
+            <p>7 văi și-o vale adâncă</p>
+            <p>Aseară ți-am luat basma</p>
+            <p>Bine-i șade mesei mele - Ion Paladi</p>
+            <p>Bobârlica</p>
+            <p>Bordeiaș, bordei, bordei</p>
+            <p>Bun îi vinul ghiurghiuliu</p>
+            <p>Cântă cucu-n Bucovina</p>
+            <p>Cântecele mele - Andra</p>
+            <p>Cine numele mi-l poartă - Taraful din Clejani</p>
+            <p>Constantine, Constantine</p>
+            <p>Cui nu-i place dragostea</p>
+            <p>Dă, Doamne, la om noroc - Zinaida Julea</p>
+            <p>Dar-ar naiba-n tine, dragoste - Maria Dragomiroiu</p>
+            <p>Foaie verde 5 chiperi - Ion Paladi</p>
+            <p>Frunzuliță, iarbă deasă - Subcarpați</p>
+            <p>Joacă hora-n poieniță - Maria Lătărețu</p>
+            <p>Iară beau, iară petrec</p>
+            <p>Ionel, Ionelule</p>
+            <p>Lele - Loredana</p>
+            <p>Leliță cârciumăreasă</p>
+            <p>Mărioară de la Gorj - Maria Tănase</p>
+            <p>Mi-am pus busuioc în păr - Maria Tănase</p>
+            <p>Mociriță cu trifoi</p>
+            <p>Moldovenii s-au născut - Zdob și Zdub</p>
+            <p>Omul de inimă rea</p>
+            <p>Pe ulița armenească - Monica Anghel & Mahala Rai Banda</p>
+            <p>Sârba de demult - Zinaida Julea</p>
+            <p>Trandafir de la Moldova</p>
+            <p>Țărăncuță, țărăncuță</p>
+            <p>Zi așa, așa, așa - Adriana Antoni</p>
+            <p>Zig Zagga - Loredana</p>
+            <p>Zărzărică, Zărzărea - Benone Sinulescu</p>
+            </div>
+
+        <button class="slide-button" onclick="toggleContent(7)">MUZICA BALCANICA</button>
+        <div class="content_slide" id="content7">
+            <p>Bella Ciao</p>
+            <p>Când am o zi grea - Oana Radu</p>
+            <p>Chibori - Monica Anghel & Mahala Rai Banda</p>
+            <p>Două perechi - Taraful Rutenilor și Carmen Chindriș</p>
+            <p>Ela Ela - Elena Gheorghe</p>
+            <p>Fata de la țară - Connect-R</p>
+            <p>Gas Gas - Goran Bregović</p>
+            <p>Gia Ta Lefta Ta Kanis Ola - Antypas</p>
+            <p>Ileană, Ileană</p>
+            <p>Kalinka</p>
+            <p>Lună albă - Elena Gheorghe</p>
+            <p>Mama mea e florăreasă</p>
+            <p>Maria me ta kitrina - Ionuț Galani</p>
+            <p>Opa Opa - Pindu</p>
+            <p>Palamakia</p>
+            <p>Șaraiman</p>
+            <p>Un trandafil crești la firida mea - Pindu</p>
+            <p>Videli noci - Zdob și Zdub</p>
+            <p>Ziua-n care tu m-ai sărutat - Carmen Chindriș și Taraful Rutenilor</p>
+            </div>
+            
+
+    </div>
+
+    <p2>© Georgiana Neagu & Band. Toate drepturile rezervate.</p2>
+
+</div>
+-->
+
+<!--
+  <div class="section" id="video-section">
+      <h1>Muzica live si colaje de petrecere</h1>
+      <p3>Oricare ar fi ocazia pe care doresti sa o marchezi printr-o petrecere unica - nunta, botez, aniversare, zi de nastere sau un eveniment corporate, Georgiana Neagu & Band este trupa pe care ti-o dorești prezenta! Cu un playlist ce include numeroase piese, interpretarea 100% live a repertoriului asigura o atmosfera memorabila si o petrecere mai mult decat reusita.</p3>
+      <h1> Videoclipuri de prezentare</h1>
+      <div class="parent">
+
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bCRLIP42t94" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wK3PZNUJRo0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/b2WdisAHdmc" frameborder="0" allowfullscreen></iframe>
+        
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fN5uBp8U7Ko" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LK1j4sAGenI" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4TFwNjGL_xs" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fN5uBp8U7Ko" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Xy3UXvU_H-E" frameborder="0" allowfullscreen></iframe>
+
+      </div>
+
+      <h1> Evenimente live</h1>
+      <div class="parent">
+
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xDkQOFJb03o" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FgDiv2GCvVs" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6-uFUpGeDBQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uZLz1HYdeVI" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DPZ60MZBmUY" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fPs-VMcVgds" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p2>© Georgiana Neagu & Band. Toate drepturile rezervate.</p2>
+    </div>
+
+  
+  
+  <div class="section" id="faq-section">
+      <h1>INTREBARI FRECVENTE</h1>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(8)">Cum poate fi realizata o rezervare?</button>
+        <div class="content_slide" id="content8">
+            
+          
+          <p>Daca iti doresti ca trupa noastra sa cante la evenimentul tau, tot ce trebuie sa faci este sa ne contactezi pentru a afla mai multe detalii privind disponibilitatea de a canta in ziua pe care ai ales-o. In vederea semnarii contractului, toate detaliile de ordin tehnic, financiar și organizatoric vor fi stabilite, iar avansul necesar blocarii datei evenimentului va fi achitat.</p>
+        
+        
+        
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(9)">Care sunt costurile participarii trupei la eveniment?</button>
+        <div class="content_slide" id="content9">
+            <p>Costul depinde de numărul de seturi cantate, acesta putand varia intre 1 si 4 seturi. De asemenea, in cazul in care evenimentul are loc in afara Bucurestiului, va fi necesara achitarea suplimentara a costurilor de transport, cazare si masa.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(10)">Exista posibilitatea sa va ascultam live? </button>
+        <div class="content_slide" id="content10">
+            <p>Sigur ca da. Exista doua variante pentru a ne asculta live inainte de evenimentul vostru - fie in sala noastra de repetitii, fie in cadrul unui alt eveniment, desigur, in functie de disponibilitate si de deschiderea celor care il organizeaza.</p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(11)">Ce este un set, cat dureaza si cate seturi canta trupa la un eveniment? </button>
+        <div class="content_slide" id="content11">
+            <p>Un set reprezinta segmentul unei reprezentatii live. In general, durata unui set este in jur de 45 de minute, iar intreaga reprezentatie poate consta in 1, 2, 3 sau 4 seturi, fiecare dintre seturi fiind alcatuit din melodii selectate din playlist-ul predeterminat al trupei, pe care il poti consulta <a href="home.html"> aici</a>.  Din experienta, este indicat ca intre seturi sa fie servite felurile principale, DJ-ul fiind cel care va asigura fondul muzical in acele momente. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(12)">Care este durata instalarii si a probelor de sunet?
+        </button>
+        <div class="content_slide" id="content12">
+            <p>Intreaga durata a instalarii si a probelor de sunet este de 4 ore: scena, luminile si toate celelalte elemente tehnice sunt instalate in aproximativ 2 ore, iar instalarea instrumentelor si proba de sunet dureaza aproximativ 2 ore, de asemenea. Stabilirea elementelor tehnice are loc in momentul semnarii contractului, ele depinzand de mai multe aspecte: de preferintele tale, de locatie si spatiul disponibil, precum si de dotarile de care aceasta dispune si care sunt incluse in pretul inchirierii locatiei - fie ca e vorba de scena, lumini sau de sisteme de sonorizare performante. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(13)">Care sunt zonele in care cantati?
+        </button>
+        <div class="content_slide" id="content13">
+            <p>Trupa poate canta in orice loc din tara, dar si din strainatate.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(14)">In afara de locatiile clasice destinate evenimentelor, trupa poate canta si in aer liber sau intr-un cort?</button>
+        <div class="content_slide" id="content14">
+            <p>In mod cert! Putem canta si in aceste tipuri de locatii, insa este nevoie sa tinem cont de mai multe aspecte. In primul rand, este extrem de important ca elementele tehnice si instrumentele sa poata fi asezate pe un plan neted. Un alt aspect este reprezentat de necesitatea asigurarii unui circuit electric trifazic, unul special dedicat trupei, asa cum se obisnuieste in toate spatiile de evenimente. Nu in ultimul rand, conditiile meteorologice sunt si ele un factor determinant in ceea ce priveste posibilitatea de a canta in aer liber.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(15)">Exista limitari de spatiu in ceea ce priveste locatia? </button>
+        <div class="content_slide" id="content15">
+            <p>In general, singura limitare de spatiu este reprezentata de scena de 4x3m, unde vor fi asezate toba si clapele, Ne putem adapta la specificatiile locatiei, iar daca inca nu le cunosti, putem discuta noi cu reprezentantii acesteia. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(16)">Cum pot fi alese piesele pe care le veti canta la eveniment?
+        </button>
+        <div class="content_slide" id="content16">
+            <p>In functie de preferintele tale, ne putem sfatui astfel incat sa poti alege din <a href="home.html"> playlist-ul</a> nostru piesele care consideri ca se vor potrivi evenimentului tau si care vor asigura buna dispozitie a invitatilor.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(17)">Exista posibilitatea ca trupa sa cante dansul mirilor la nunta mea? </button>
+        <div class="content_slide" id="content17">
+            <p>Cu siguranta! Fie ca alegeti o piesa din <a href="home.html"> playlist-ul</a> nostru, fie ca v-ati dori o piesa diferita, cu o insemnatate aparte pentru voi, suntem mai mult decat bucurosi sa va fim alaturi in cel mai important moment al serii. In cazul in care piesa pe care v-o doriti nu se regaseste in repertoriul actual, este necesar ca propunerea voastra sa fie trimisa cu cel putin o luna inainte de data evenimentului, astfel incat sa putem decide daca ni se potriveste atat din punct de vedere vocal, cat si instrumental, fapt de care va vom anunta. Daca nu putem interpreta piesa aleasa de voi, ne putem sfatui pentru a alege impreuna o alta piesa.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(18)">Daca noi sau invitatii ne dorim sa cantati pe loc una sau mai multe piese care nu sunt incluse in playlist-ul trupei, este posibil?
+        </button>
+        <div class="content_slide" id="content18">
+            <p>Din neferice, nu. Nu putem interpreta o piesa care nu se regaseste in playlist-ul nostru actual, nefiind repetata anterior, in special pentru ca ne dorim sa asiguram cea mai inalta calitate a reprezentatiei noastre. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(19)">Exista posibilitatea ca trupa sa cante toata noaptea?</button>
+        <div class="content_slide" id="content19">
+            <p>Conform experientei noastre, cele 4 seturi a cate 45 de minute, completate de DJ-ul care va pune muzica in momentele in care se servesc felurile principale de mancare, vor acoperi toata durata evenimentului. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(20)">Exista posibilitatea sa cantati inca un set in cazul in care consideram ca este necesar? </button>
+        <div class="content_slide" id="content20">
+            <p>Da, in cazul in care atat voi, cat si noi consideram ca este nevoie, putem canta inca un set in plus, in functie de detaliile stabilite in cadrul contractului.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(21)">Este in regula daca ne dorim sa participe si alti artisti la evenimentul nostru?
+        </button>
+        <div class="content_slide" id="content21">
+            <p>Cu siguranta! Fie ca e vorba de alti solisti - de muzica usoara, populara, lautareasca etc. -  sau orice alt moment artistic, puteti invita orice artist considerati ca va completa perfect evenimentul vostru. Totusi, pentru a stabili toate detaliile tehnice, va fi necesar sa fim pusi in legatura.
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(22)">Cum ne sfatuiti sa organizam programul evenimentului nostru?
+        </button>
+        <div class="content_slide" id="content22">
+            <p>In primul rand, trebuie sa tinem cont de ora inceperii evenimentului, de orele de servire ale felurilor principale, precum si de prezenta altor artisti. Consideram ca este extrem de important ca servirea felurilor de mancare sa nu se suprapuna cu niciunul din seturile live, recomandarea fiind ca DJ-ul sa asigure fondul muzical in acele momente. In orice caz, pe masura ce se apropie evenimentul, ne putem sfatui astfel incat petrecerea sa fie un real succes.  
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(23)">Este nevoie sa asiguram trupei mancare si bautura?
+        </button>
+        <div class="content_slide" id="content23">
+            <p>Da, cu siguranta este nevoie ca mancarea si bautura sa fie asigurate, astfel incat sa putem sustine numarul de seturi pentru care optati cu energie si voie buna. Tipul meniului este alegerea voastra, intrucat exista si varianta meniurilor speciale pentru staff in majoritatea locatiilor. 
+            </p>
+        </div>
+    </div>
+
+    <div class="slide-button-container">
+        <button class="slide-button" onclick="toggleContent(24)">Exista posibilitatea ca trupa sa anuleze evenimentul? 
+        </button>
+        <div class="content_slide" id="content24">
+            <p>Fie ca e vorba de anularea cu mult timp inaintea evenimentul, fie ca e vorba de ultimul moment, nu s-a intamplat niciodata ca noi sa anulam un eveniment. Intr-adevar, exista cazurile de forta majora specificate si in contract, cum ar fi calamitatile naturale sau starile de urgenta la nivel national care pot interzice prin lege organizarea evenimentelor sau desfasurarea activitatii artistice, insa in acest context intreaga noastra echipa va sta la dispozitie pentru a discuta despre reprogramarea evenimentului, in functie de disponibilitatea trupei.</p>
+        </div>
+    </div>
+
+
+<p2>© Georgiana Neagu & Band. Toate drepturile rezervate.</p2>
+
+  </div>
+
+-->
+  
+
+<div class="section" id="review-section">
+  <h1>Ce spun clientii nostri</h1>
+  
+ <!-- <div class="parent2">
+    <div class="test1">
+      <img src="client1.png">
+    </div>
+    <div class="test2">
+      <img src="client2.png">
+    </div>
+    <div class="test3">
+      <img src="client3.png">
+    </div>
+    <div class="test4">
+      <img src="client4.png">
+    </div>
+    <div class="test5">
+      <img src="client5.png">
+    </div>
+  </div>
+
+-->
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="client1.png" style="width:100%;  border-radius: 10%;">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="client2.png" style="width:100%;  border-radius: 10%;">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="client3.png" style="width:100%;  border-radius: 10%;">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="client4.png" style="width:100%; border-radius: 10%;">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="client5.png" style="width:100%; border-radius: 10%;">
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <p2>© Georgiana Neagu & Band. Toate drepturile rezervate.</p2>
+  
+
+</div>
+
+</div>
+</div>
+
+<!-- ... Alte coduri HTML ... -->
+
+
+<!-- ... Alte coduri HTML ... -->
+
+
+
+
+
+    <script src="script_home.js"></script>
+</body>
+</html>

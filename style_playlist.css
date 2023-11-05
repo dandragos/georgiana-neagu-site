@@ -1,0 +1,913 @@
+body, html {
+  height: 100%;
+  margin: 0px;
+  padding: 0;
+  background-color: whitesmoke;
+  position: relative; /* Elementul main va acoperi videoclipul */
+  z-index: -100; /* Plasăm conținutul principal deasupra videoclipului */
+  /* Alte stiluri pentru containerul principal */
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+.aclass {
+  display: block;
+  width: 98%;
+  height: 80%;
+  text-align: center;
+  line-height: 50px; /* Ajustează înălțimea liniei la înălțimea div-ului pentru a centra textul vertical */
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  font-size: 1em;
+  font-family: 'Questrial', sans-serif;
+  border: 1.3px solid black;
+  border-radius: 0%;
+  transition: transform 0.4s; box-shadow: 0.3s;
+  left: 1%;
+  position: relative;
+  background-color: whitesmoke;
+
+}
+
+
+
+.logoheader{
+  width: 300px;
+  position: relative;
+  bottom: 20px;
+}
+
+.aclass:hover {
+  background-color: black; /* Schimbă culoarea de fundal la hover */
+  color: white;
+  transform: scale(1.05); /* Mărim imaginea puțin la hover */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-rows: 0.3fr 1fr 1fr 0.3fr; 
+  gap: 12px;
+  grid-auto-flow: row;
+  grid-template-areas: 
+    "POZA7 POZA7 POZA7"
+    "POZA1 POZA-3 POZA-4"
+    "POZA2 POZA-3 POZA5"
+    "POZA6 POZA6 POZA6"; 
+  height: 80%; /* Setăm înălțimea grid-ului la 100% din înălțimea ferestrei vizibile */
+  width: 70%;
+  margin: 5px;
+  position: relative;
+  top: 50%; /* Plasează elementul la jumătatea înălțimii ferestrei vizibile */
+  left: 50%; /* Plasează elementul la jumătatea lățimii ferestrei vizibile */
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+
+  
+}
+
+.POZA-3 { 
+  grid-area: POZA-3; 
+  background-image: url('POZA3.png'); 
+  background-size: cover; /* Acoperim complet casuta cu imaginea */
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea in casuta */
+  margin: 0; /* Eliminăm marginile */
+
+}
+
+.POZA6 { 
+  grid-area: POZA6; 
+  background-color: transparent;
+  position: relative;
+  top: 40px;
+  border-radius: 10%;
+}
+
+.POZA7 { 
+  grid-area: POZA7; 
+  background-color: gray;
+  margin: 0; /* Eliminăm marginile */
+  border-radius: 10%;
+  background-color: transparent;
+}
+
+.POZA1 { 
+  grid-area: POZA1; 
+  background-image: url('POZA1.png'); 
+  background-size: cover; /* Acoperim complet casuta cu imaginea */
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea in casuta */
+  margin: 0; /* Eliminăm marginile */
+}
+.POZA2 { 
+  grid-area: POZA2; 
+  background-image: url('POZA2.png'); 
+  background-size: cover; /* Acoperim complet casuta cu imaginea */
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea in casuta */
+  margin: 0; /* Eliminăm marginile */
+}
+.POZA-4 { 
+  grid-area: POZA-4; 
+  background-image: url('POZA4.png'); 
+  background-size: cover; /* Acoperim complet casuta cu imaginea */
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea in casuta */
+  margin: 0; /* Eliminăm marginile */
+}
+.POZA5 { 
+  grid-area: POZA5; 
+  background-image: url('POZA5.png'); 
+  background-size: cover; /* Acoperim complet casuta cu imaginea */
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea in casuta */
+  margin: 0; /* Eliminăm marginile */
+}
+
+
+
+
+/* Stilurile pentru poze */
+.POZA-3, .POZA1, .POZA2, .POZA-4, .POZA5 {
+  background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+  background-position: center; /* Centram imaginea în casetă */
+  margin: 0; /* Eliminăm marginile */
+  transition: filter 0.3s, background-color 0.3s, transform 0.3s; /* Adăugăm tranziția pentru efectul de hover și transformarea */
+  position: relative; /* Specificăm poziția relativă pentru a permite pseudoelementului */
+  margin: 15px;
+  border-radius: 0%;
+  height: 100%;
+}
+
+/* Efect de vignette */
+.POZA-3::before, .POZA1::before, .POZA2::before, .POZA-4::before, .POZA5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Efect de vignette */
+  pointer-events: none; /* Ignorăm evenimentele mouse-ului pentru a permite trecerea la imaginea din spate */
+  border-radius: 0%;
+}
+
+/* Efect de hover */
+.POZA-3:hover, .POZA1:hover, .POZA2:hover, .POZA-4:hover, .POZA5:hover {
+  filter: grayscale(0%) brightness(1.3); /* Transformăm imaginea în colorată și mărim luminozitatea la hover */
+  background-color: rgba(0, 0, 0, 0); /* Adăugăm un fundal transparent la hover */
+  transform: scale(1.05); /* Mărim imaginea puțin la hover */
+}
+
+
+header {
+  text-align: center; /* Centram textul orizontal */
+  padding: 0vh;
+  background-color: transparent; /* Fundal de culoare pentru antet */
+  color: #fff; /* Culoarea textului */
+  letter-spacing: 1px;
+  top: 40px;
+  position: relative;
+}
+
+
+.logoheader{
+  width: 300px;
+  position: relative;
+  bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.5em; /* Dimensiunea fontului de 2em */
+  margin: 0; /* Eliminăm marginile implicite ale titlului */
+  font-family: 'Questrial', sans-serif;
+  color: black;
+}
+
+
+/* Stilurile pentru fundalul videoclipului */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Plasăm videoclipul sub conținutul principal */
+  object-fit: contain;
+}
+
+
+.POZA-3 a, .POZA1 a, .POZA2 a, .POZA-4 a, .POZA5 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1 /* Plasăm elementul <a> sub fundal */
+}
+
+
+.POZA-3 a img,
+.POZA1 a img,
+.POZA2 a img,
+.POZA-4 a img,
+.POZA5 a img {
+  width: 0px; /* Setează lățimea dorită pentru poze */
+  height: 0; /* Menține proporțiile pozei */
+}
+
+
+.POZA-3 p, .POZA1 p, .POZA2 p, .POZA-4 p, .POZA5 p {
+  font-size: 1em;
+  font-family: 'Questrial', sans-serif;
+  color: #fff;
+  z-index: 1000;
+  position: relative;
+  margin: 20px;
+  letter-spacing: 2px;
+  top: 70%;
+}
+
+
+.POZA-3 h {
+
+  font-size: 1.5em;
+  font-family: 'Questrial', sans-serif;
+  color: #fff;
+  z-index: 1000;
+  position: relative;
+  margin: 40px;
+  letter-spacing: 2px;
+  top: 80%;
+}
+
+.footer {
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  top: 85px;
+  position: relative;
+  z-index: -5;
+  background-size: cover;
+
+}
+
+.footer p{
+  font-size: 1.5vh;
+}
+
+.back-button {
+  display: block; /* Inițial ascuns */
+  text-align: center; /* Centrat textul pe orizontală */
+  color: black; /* Text negru */
+  background-color: transparent; /* Fundal transparent */
+  border: 0px solid black; /* Contur negru */
+  border-radius: 5px; /* Colțuri rotunjite */
+  width: 120px; /* Lățime de 3 pixeli */
+  height: 40px; /* Înălțime de 5 pixeli */
+  line-height: 40px; /* Înălțimea liniei pentru a centra textul vertical */
+  font-size: 14px; /* Dimensiunea fontului de 3 pixeli */
+  cursor: pointer; /* Cursor pointer la hover pentru a indica că este interactiv */
+  transition: background-color 0.3s, color 0.3s; /* Efect de hover pentru fundal și culoarea textului */
+  margin: 0 auto; /* Centrat pe orizontală în containerul său */
+  align-self: top center;
+  position: relative;
+  top: 60px;
+  left:27px;
+  text-decoration: none;
+
+
+}
+
+/* Stil pentru textul din buton */
+.back-button p {
+  margin: 0; /* Eliminăm marginile implicite ale textului */
+  font-family: 'Questrial', sans-serif;
+  position: relative;
+  text-decoration: none;
+  
+
+}
+
+/* Efect de hover pentru butonul "back-button" */
+.back-button:hover {
+  background-color: transparent; /* Fundal negru la hover */
+}
+
+
+
+/* Animatie de retractare (slideUp) */
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Animatie de afisare (slideDown) */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stiluri pentru sectiuni */
+/* Stiluri pentru sectiuni */
+.section {
+  overflow: hidden;
+  transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+  background-color:transparent;
+  bottom: 0px;
+  position: relative;
+  opacity: 1;
+  max-height: fit-content; /* Modificarea aici */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  top: 90px;
+  padding-bottom: 10px;
+}
+
+
+.section::before {
+  /* Adăugați un pseudo-element deasupra imaginii de fundal */
+  content: "";
+  background-image: url('texture.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1; /* Reduceti opacitatea pseudo-elementului pentru imaginea de fundal */
+  z-index: -1; /* Plasați pseudo-elementul sub conținutul textului */
+}
+
+.section::after {
+  /* Adăugați un alt pseudo-element pentru efectul de vignette */
+  content: "";
+  background-image: radial-gradient(ellipse at center, transparent 0%, rgb(255, 255, 255));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+
+.section h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+}
+
+.section p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  
+}
+
+.section p2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-top: 100px;
+}
+
+.section p3{
+  text-align: center;
+  max-width: 60%;
+  font-size: 18px;
+}
+
+
+/* Stil pentru sectiunile active */
+.section.active {
+  max-height: 10000px; /* O valoare mare pentru a permite afișarea întregului conținut */
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  opacity: 1;
+}
+
+
+
+/* Stilurile pentru animația "fade out" a containerului */
+.container.fade-out {
+  animation: fadeOut 1s ease-in-out;
+}
+
+/* Stilurile pentru animația "fade in" a containerului */
+.container.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animatie "fade out" */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animatie "fade in" */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Stilurile pentru efectul de fade-in la secțiuni */
+.section.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+/* Animatie "fade in" */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* Stiluri pentru efectul de fade-in */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 10s ease-in-out forwards; /* Schimbați 2s la durata dorită (în secunde) */
+}
+
+
+/* Stilurile CSS pentru animație */
+@keyframes slideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.slide-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-decoration: none;
+}
+.slide-button {
+  background: transparent;
+  color: black;
+  border: none;
+  padding: 5% 5%;
+  margin: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  border: 0.2px solid black;
+  border-radius: 5px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+.slide-button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.content_slide {
+  display: none;
+  padding: 10px;
+  border: 0px solid #ccc;
+  background-color: transparent;
+  animation: slideDown 0.5s ease-in-out; /* Aplicarea animației */
+  font-family: 'Questrial', sans-serif;
+}
+
+.content_slide p{
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+div.pullUpDown p:before, div.pullUpDown p:after
+{
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    left: -10px;
+    content: '';
+    background: gray;
+    opacity: 0.3;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+div.pullUpDown p:before
+{
+    top: 0px;
+} 
+
+div.pullUpDown p:after
+{
+    bottom: 0px;
+}
+
+div.pullUpDown p:hover:before, div.pullUpDown p:hover:after
+{
+    height: 100%;
+}
+
+div.container_meniu
+{
+  font-family: Raleway;
+  margin: 0 auto;
+	padding: 10em 3em;
+  left: 200px;
+  position: relative;
+}
+
+div.container_meniu p
+{
+    color: red;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    bottom: 0px;
+}
+
+.transparent
+{
+    background: whitesmoke;
+}
+
+#video-fundal {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -40000; /* Asigură-te că videoclipul este în spatele altor elemente */
+}
+
+
+
+
+#floating-button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 20px;  
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  z-index: 9999;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  font: 0.7em;
+  display: block;
+}
+
+#floating-button i{
+  margin-right: 5px;
+}
+
+#floating-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 30%;
+  position: relative;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 10%;
+}
+
+
+@media screen and (max-width: 700px) {
+  .slideshow-container{
+    width: 50%;
+  }
+    #floating-button span {
+      display: none;
+    }
+    #floating-button i{
+      margin-right: 0;
+    }
+    #floating-button{
+      top: 88%;
+      right: 8%;
+      padding: 10px;
+      padding-bottom: 25px;
+      border-radius: 20%;
+    }
+
+
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 80px 25px; 
+    width: 90%;
+    height: 150%;
+    top: 78%;
+    grid-template-areas: 
+      "POZA-3"
+      "POZA1"
+      "POZA2"
+      "POZA-4"
+      "POZA5"
+      "POZA6"
+      "POZA7"; 
+  }
+  
+
+  .POZA7, .POZA6{
+    bottom: 50px;
+    position: relative;
+    transform: scale(0.92);
+    line-height: 10px;
+    height: 55%;
+    width: 100%;
+    left: -10%;
+    padding: -10%;
+  }
+
+  .POZA-3 p , .POZA1 p, .POZA2 p, .POZA-4 p, .POZA5 p {
+    font-size: 0.8em;
+    top: 90%;
+    right:10%;
+  }
+
+  .POZA-3 h{
+    top:95%;
+    right:20%;
+  }
+
+
+  .POZA-3 , .POZA1 , .POZA2 , .POZA-4 , .POZA5 , .POZA6, .POZA7{
+
+    background-size: cover; /* Acoperim complet casuta cu imaginea */
+    background-repeat: no-repeat; /* Pentru a evita repetarea imaginii */
+    background-position: center; /* Centram imaginea in casuta */
+    padding: 10%;
+
+  }
+
+  .aclass{
+    bottom:80%;
+  }
+
+  .POZA7{
+
+    bottom:80%;
+  }
+
+  .POZA-4{
+    background-position: 50% 30%;
+  }
+  .POZA2{
+    background-position:50% 35% ;
+  }
+
+  .footer{
+    padding: 1px;
+    top: 70px;
+  }
+  .POZA-3 h{
+    font-size: 1em;
+  }
+
+  .back-button{
+    left: -75px;
+  }
+
+.section{
+  top: 70px;
+}
+.section p{
+  font-size: 14px;
+  text-align: center;
+}
+
+.section p2{
+  text-align: center;
+  font-size:12px;
+}
+.section h1{
+  font-size: 22px;
+}
+
+.section p3{
+  font-size: 14px;
+}
+
+
+.back-button{
+left:10px;
+
+}
+
+.slide-button-container{
+  width: 80%;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 80%;
+  height: 100%;
+  }
+
+  .parent2 {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1% 1%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "test1 test1"
+      "test2 test3"
+      "test4 test5";
+    max-height: 1600px;
+    }
+  
+  .test1 { 
+    grid-area: test1; 
+  
+  }
+  
+  .test2 { grid-area: test2; }
+  
+  .test3 { grid-area: test3;}
+  
+  .test4 { grid-area: test4; }
+  
+  .test5 { grid-area: test5;}
+
+  .test1 img{
+    width: 800px;
+    border-radius: 10%;
+  }
+  .test2 img{
+    width: 400px;
+    border-radius: 10%;
+  }
+  .test3 img{
+    width: 400px;
+    border-radius: 10%;
+  }
+  .test4 img{
+    width: 400px;
+    border-radius: 10%;
+  }
+  .test5 img{
+    width: 400px;
+    border-radius: 10%;
+  }
+  
+
+
+/*.mySlides {display: none}
+
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: transparent;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+

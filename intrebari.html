@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_playlist.css">
+    <script src="script_home.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <title>Georgiana Neagu & Band</title>
+</head>
+<body>
+
+    <a href="contact.html" id="floating-button">
+        <i class="fas fa-envelope"></i><span>Contactează-ne</span>
+      </a>
+
+    <header id="header">
+        <img src="logotranspnegru.png" class="logoheader">
+    </header>
+    
+    <!-- Butonul "back-button" pentru a reveni la afișarea butoanelor -->
+    <a href="home.html">
+        <div class="back-button" id="back-button">
+            <div class="slide-button-container transparent pullUpDown">
+                <p>MENIU</p>
+            </div>
+        </div>
+    </a>
+
+    <div class="sections">
+
+        <div class="section" id="faq-section">
+            <h1>INTREBARI FRECVENTE</h1>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(8)">Cum poate fi realizata o rezervare?</button>
+              <div class="content_slide" id="content8">
+                  
+                
+                <p>Daca iti doresti ca trupa noastra sa cante la evenimentul tau, tot ce trebuie sa faci este sa ne contactezi pentru a afla mai multe detalii privind disponibilitatea de a canta in ziua pe care ai ales-o. In vederea semnarii contractului, toate detaliile de ordin tehnic, financiar și organizatoric vor fi stabilite, iar avansul necesar blocarii datei evenimentului va fi achitat.</p>
+              
+              
+              
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(9)">Care sunt costurile participarii trupei la eveniment?</button>
+              <div class="content_slide" id="content9">
+                  <p>Costul depinde de numărul de seturi cantate, acesta putand varia intre 1 si 4 seturi. De asemenea, in cazul in care evenimentul are loc in afara Bucurestiului, va fi necesara achitarea suplimentara a costurilor de transport, cazare si masa.
+      
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(10)">Exista posibilitatea sa va ascultam live? </button>
+              <div class="content_slide" id="content10">
+                  <p>Sigur ca da. Exista doua variante pentru a ne asculta live inainte de evenimentul vostru - fie in sala noastra de repetitii, fie in cadrul unui alt eveniment, desigur, in functie de disponibilitate si de deschiderea celor care il organizeaza.</p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(11)">Ce este un set, cat dureaza si cate seturi canta trupa la un eveniment? </button>
+              <div class="content_slide" id="content11">
+                  <p>Un set reprezinta segmentul unei reprezentatii live. In general, durata unui set este in jur de 45 de minute, iar intreaga reprezentatie poate consta in 1, 2, 3 sau 4 seturi, fiecare dintre seturi fiind alcatuit din melodii selectate din playlist-ul predeterminat al trupei, pe care il poti consulta <a href="home.html"> aici</a>.  Din experienta, este indicat ca intre seturi sa fie servite felurile principale, DJ-ul fiind cel care va asigura fondul muzical in acele momente. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(12)">Care este durata instalarii si a probelor de sunet?
+              </button>
+              <div class="content_slide" id="content12">
+                  <p>Intreaga durata a instalarii si a probelor de sunet este de 4 ore: scena, luminile si toate celelalte elemente tehnice sunt instalate in aproximativ 2 ore, iar instalarea instrumentelor si proba de sunet dureaza aproximativ 2 ore, de asemenea. Stabilirea elementelor tehnice are loc in momentul semnarii contractului, ele depinzand de mai multe aspecte: de preferintele tale, de locatie si spatiul disponibil, precum si de dotarile de care aceasta dispune si care sunt incluse in pretul inchirierii locatiei - fie ca e vorba de scena, lumini sau de sisteme de sonorizare performante. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(13)">Care sunt zonele in care cantati?
+              </button>
+              <div class="content_slide" id="content13">
+                  <p>Trupa poate canta in orice loc din tara, dar si din strainatate.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(14)">In afara de locatiile clasice destinate evenimentelor, trupa poate canta si in aer liber sau intr-un cort?</button>
+              <div class="content_slide" id="content14">
+                  <p>In mod cert! Putem canta si in aceste tipuri de locatii, insa este nevoie sa tinem cont de mai multe aspecte. In primul rand, este extrem de important ca elementele tehnice si instrumentele sa poata fi asezate pe un plan neted. Un alt aspect este reprezentat de necesitatea asigurarii unui circuit electric trifazic, unul special dedicat trupei, asa cum se obisnuieste in toate spatiile de evenimente. Nu in ultimul rand, conditiile meteorologice sunt si ele un factor determinant in ceea ce priveste posibilitatea de a canta in aer liber.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(15)">Exista limitari de spatiu in ceea ce priveste locatia? </button>
+              <div class="content_slide" id="content15">
+                  <p>In general, singura limitare de spatiu este reprezentata de scena de 4x3m, unde vor fi asezate toba si clapele, Ne putem adapta la specificatiile locatiei, iar daca inca nu le cunosti, putem discuta noi cu reprezentantii acesteia. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(16)">Cum pot fi alese piesele pe care le veti canta la eveniment?
+              </button>
+              <div class="content_slide" id="content16">
+                  <p>In functie de preferintele tale, ne putem sfatui astfel incat sa poti alege din <a href="home.html"> playlist-ul</a> nostru piesele care consideri ca se vor potrivi evenimentului tau si care vor asigura buna dispozitie a invitatilor.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(17)">Exista posibilitatea ca trupa sa cante dansul mirilor la nunta mea? </button>
+              <div class="content_slide" id="content17">
+                  <p>Cu siguranta! Fie ca alegeti o piesa din <a href="home.html"> playlist-ul</a> nostru, fie ca v-ati dori o piesa diferita, cu o insemnatate aparte pentru voi, suntem mai mult decat bucurosi sa va fim alaturi in cel mai important moment al serii. In cazul in care piesa pe care v-o doriti nu se regaseste in repertoriul actual, este necesar ca propunerea voastra sa fie trimisa cu cel putin o luna inainte de data evenimentului, astfel incat sa putem decide daca ni se potriveste atat din punct de vedere vocal, cat si instrumental, fapt de care va vom anunta. Daca nu putem interpreta piesa aleasa de voi, ne putem sfatui pentru a alege impreuna o alta piesa.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(18)">Daca noi sau invitatii ne dorim sa cantati pe loc una sau mai multe piese care nu sunt incluse in playlist-ul trupei, este posibil?
+              </button>
+              <div class="content_slide" id="content18">
+                  <p>Din neferice, nu. Nu putem interpreta o piesa care nu se regaseste in playlist-ul nostru actual, nefiind repetata anterior, in special pentru ca ne dorim sa asiguram cea mai inalta calitate a reprezentatiei noastre. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(19)">Exista posibilitatea ca trupa sa cante toata noaptea?</button>
+              <div class="content_slide" id="content19">
+                  <p>Conform experientei noastre, cele 4 seturi a cate 45 de minute, completate de DJ-ul care va pune muzica in momentele in care se servesc felurile principale de mancare, vor acoperi toata durata evenimentului. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(20)">Exista posibilitatea sa cantati inca un set in cazul in care consideram ca este necesar? </button>
+              <div class="content_slide" id="content20">
+                  <p>Da, in cazul in care atat voi, cat si noi consideram ca este nevoie, putem canta inca un set in plus, in functie de detaliile stabilite in cadrul contractului.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(21)">Este in regula daca ne dorim sa participe si alti artisti la evenimentul nostru?
+              </button>
+              <div class="content_slide" id="content21">
+                  <p>Cu siguranta! Fie ca e vorba de alti solisti - de muzica usoara, populara, lautareasca etc. -  sau orice alt moment artistic, puteti invita orice artist considerati ca va completa perfect evenimentul vostru. Totusi, pentru a stabili toate detaliile tehnice, va fi necesar sa fim pusi in legatura.
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(22)">Cum ne sfatuiti sa organizam programul evenimentului nostru?
+              </button>
+              <div class="content_slide" id="content22">
+                  <p>In primul rand, trebuie sa tinem cont de ora inceperii evenimentului, de orele de servire ale felurilor principale, precum si de prezenta altor artisti. Consideram ca este extrem de important ca servirea felurilor de mancare sa nu se suprapuna cu niciunul din seturile live, recomandarea fiind ca DJ-ul sa asigure fondul muzical in acele momente. In orice caz, pe masura ce se apropie evenimentul, ne putem sfatui astfel incat petrecerea sa fie un real succes.  
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(23)">Este nevoie sa asiguram trupei mancare si bautura?
+              </button>
+              <div class="content_slide" id="content23">
+                  <p>Da, cu siguranta este nevoie ca mancarea si bautura sa fie asigurate, astfel incat sa putem sustine numarul de seturi pentru care optati cu energie si voie buna. Tipul meniului este alegerea voastra, intrucat exista si varianta meniurilor speciale pentru staff in majoritatea locatiilor. 
+                  </p>
+              </div>
+          </div>
+      
+          <div class="slide-button-container">
+              <button class="slide-button" onclick="toggleContent(24)">Exista posibilitatea ca trupa sa anuleze evenimentul? 
+              </button>
+              <div class="content_slide" id="content24">
+                  <p>Fie ca e vorba de anularea cu mult timp inaintea evenimentul, fie ca e vorba de ultimul moment, nu s-a intamplat niciodata ca noi sa anulam un eveniment. Intr-adevar, exista cazurile de forta majora specificate si in contract, cum ar fi calamitatile naturale sau starile de urgenta la nivel national care pot interzice prin lege organizarea evenimentelor sau desfasurarea activitatii artistice, insa in acest context intreaga noastra echipa va sta la dispozitie pentru a discuta despre reprogramarea evenimentului, in functie de disponibilitatea trupei.</p>
+              </div>
+          </div>
+      
+      
+      <p2>© Georgiana Neagu & Band. Toate drepturile rezervate.</p2>
+      
+        </div>
+
+    </div>
+
+</body>
+</html>

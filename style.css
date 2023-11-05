@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Adăugăm pseudo-elemente ::before și ::after pentru efectul de vignette */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  top: 0;
+  left: 0;
+}
+
+body::after {
+  top: 0;
+  right: 0;
+}
+.content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 2px;
+  font-weight: -100;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.enter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  border: 1px solid #fff;
+  transition: background-color 0.3s, color 0.3s;
+  position: absolute; /* Poziția absolută pentru amplasarea butonului */
+  top: 350px; /* Distanța de la partea de jos a paginii */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.enter-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+#logo{
+  width: 75%;
+}
+
+
+/* ... alte stiluri ... */
+
+/* Stiluri pentru efectul de fade-out */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Durata și curba de tranziție */
+  pointer-events: none; /* Dezactivează evenimentele pe elemente în timpul tranziției */
+}
+
+
+/* Media query pentru ecranele de telefon */
+@media (max-width: 768px) {
+  /* Stiluri pentru text la dimensiuni mai mici */
+  .content h1 {
+      font-size: 1em; /* Ajustează dimensiunea textului pentru ecrane mici */
+  }
+
+  /* Stiluri pentru buton la dimensiuni mai mici */
+  .enter-button {
+      padding: 5% 7%; /* Ajustează dimensiunile butonului pentru ecrane mici */
+      font-size: 0.5em; /* Ajustează dimensiunea textului butonului pentru ecrane mici */
+      top: 80%;
+    
+  }
+  #logo{
+    width: 100%;
+  }
+}
+
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 150%;
+  min-height: 135%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  bottom: -25%;
+  
+}
+
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+@media (min-width: 1800px) {
+  .enter-button {
+    padding: 2% 3%; /* Ajustează dimensiunile butonului pentru ecrane mici */
+    font-size: 2em; /* Ajustează dimensiunea textului butonului pentru ecrane mici */
+    top: 80%;
+  
+}
+}
