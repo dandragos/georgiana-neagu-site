@@ -1,3 +1,5 @@
+
+/*
 // Obține referințe la butoanele și secțiunile aferente
 const trupaButton = document.getElementById("trupa-button");
 const playlistButton = document.getElementById("playlist-button");
@@ -28,6 +30,8 @@ function toggleSection(sectionId) {
     document.querySelector(".container").style.display = "none";
   }
 }
+
+
 
 function addEventListenerToButton(button, sectionId) {
   button.addEventListener("click", function () {
@@ -182,7 +186,7 @@ function toggleContent(contentId) {
 
 
 
-
+/*
 
 
 
