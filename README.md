@@ -4,7 +4,7 @@ Welcome to the official repository for the Georgiana Neagu & Band website! Here 
 
 ## Description
 
-This website was created to promote the music and activities of the Georgiana Neagu & Band. The site was developed using HTML, CSS, and JavaScript to provide an interactive and engaging experience for visitors.
+This website was created to promote the music and activities of the Georgiana Neagu & Band. The site was developed from scratch using HTML, CSS, and JavaScript to provide an interactive and engaging experience for visitors.
 
 
 ## Contact
